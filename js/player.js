@@ -1,14 +1,25 @@
 class Player{
-    constructor(){
+    constructor(gameScreen,left,top,height,width){
         this.gameScreen=gameScreen;
-        this.left=0;
-        this.top=0;
-        this.height=0;
-        this.width=0;
+        this.left=left;
+        this.top=top;
+        this.height=height;
+        this.width=width;
         this.element =document.createElement('img')
 
         
-        this.element.src ='"C:\Users\sanja\Desktop\project\image\bubble.png"'
+        this.element.src = '../images/blo.png'
+
         this.element.style.position='absolute'
+
+        this.element.style.left = `${this.left}px`
+        this.element.style.top = `${this.top}px`
+        this.element.style.height = `${this.height}px`
+        this.element.style.width = `${this.width}px`
+
+        this.gameScreen.appendChild(this.element)
+
+
     } 
+
 }

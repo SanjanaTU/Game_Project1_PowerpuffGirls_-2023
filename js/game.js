@@ -1,10 +1,11 @@
 class Game {
     constructor() {
-      this.startScreen = document.getElementsById('game-intro');
+      this.startScreen = document.getElementById('game-intro');
       this.gameScreen = document.getElementById("game-screen");
       this.gameEndScreen = document.getElementById("game-end");
-      this.height = '';
-      this.width = '';
+      this.height= 600;
+      this.width = 500;
+      this.player=new Player(this.gameScreen,1008,1008,100,100)
       
 
     }
@@ -20,12 +21,11 @@ class Game {
      
       }
       gameLoop(){
-        this.Update();
-        requestAnimationFrame(() =>   this.gameLoop())
+        this.update()
+      }
+
+      update(){
 
       }
 
-      Update(){
-
-      }
     }
