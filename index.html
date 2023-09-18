@@ -11,19 +11,42 @@
         <div id="game-intro">
            
                 <img src="./images/log.png" alt="background image" class="logo">
-                <h1 class="adven">Welcome to Powerpack adventure</h1>
+                <h1 class="adven">Welcome To Powerpack Adventure</h1>
                 <p class="des_game">The Game is an action-packed adventure where players join Blossom, Bubbles, 
                     and Buttercup to save Townsville from villains using their unique superpowers and teamwork.</p>
-                
-
-            <div class="container">
-                <button class="btn">Let's Begin</button>
-                <button class="btn_inst">Instructions</button>
-                <button class="players">Choose A Player</button>
-            </div>
-            
-
+                <button id="btn">Let's Begin</button>
+                <button id="btn_inst">Instructions</button>
+                <button id="players">Choose A Player</button>
+           
         </div>
+
+            <div id="game-container">
+                <div>
+                  <h2>Number Of Goals</h2>
+                  <p>Score: <span id="score">0</span></p>
+                  <p>Lives: <span id="lives">5</span></p>
+                </div>
+
+                <!-- #game-screen is initially hidden using CSS style display: none -->
+                    <div id="game-screen"></div>
+            </div>
+
+
+                <!-- #game-end is initially hidden using CSS style display: none -->
+                <div id="game-end">
+                    <img src="./images/end game.jpg" alt="" class="end-img" />
+                    <h1>Game Over!</h1>
+                    <br />
+                    <p>
+                        <span>Your Score:</span>
+                        <span id="Final-Score">0</span>
+                    </p>
+                    <button id="restart-button">Try Again!</button>
+                </div>
+     
+        <script type="text/javascript"  src="js/player.js"></script>
+        <script type="text/javascript"  src="js/game.js"></script>
+        <script type="text/javascript"  src="js/script.js"></script>
    
 </body>
 </html>
