@@ -1,18 +1,40 @@
 body {
+ 
   padding: 0;
   margin: 0;
   text-align: center;
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: linear-gradient(-45deg, #f06, #9f6, #06f, #f06);
+  background-size: 200% 200%;
+  animation: glitter 2s infinite;
+  height: 100vh;
+  width: 100vw;
+   }
+
+@keyframes glitter {
+  0% {
+      background-position: 0% 0%;
+  }
+  100% {
+      background-position: 100% 100%;
+  }
+}  
+
+ 
+
+ 
   
-}
+
 
 
 
 .logo{
-    width:500px;
+    width:300px;
     display: block;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom:90px;
     margin-left: auto;
     margin-right: auto;
     
@@ -30,8 +52,6 @@ body {
     margin-right: 300px;
     padding-left: 50px;
     padding-right: 50px;
-   
-    
     border: 3px solid #810541;
     border-radius: 20px;
     padding-top: 10px;
@@ -101,56 +121,62 @@ body {
 
 
 #game-container {
-    display: flex;
-    width: 100vw;
-    padding: 20px 0px;
+   
+  display: flex;
+     padding: 0px;
+     margin: 0px;
     justify-content:center;
     
   }
 
 
   #game-screen {
-    display: none;
-  align-content: center;
-  padding: 20px 0px;
-  padding-top: 300px;
-  padding-bottom: 300px;
-  padding-right: 50px;
-  padding-left: 80%;
-  overflow: hidden;
-  position: relative;
-  background-image: url(../images/road1.jpg);
-  background-size: cover;
-  /*animation: slide 5s linear infinite;*/
+  
+   
+      display:none;
+      align-content: center;
+      padding: 20px 0px;
+      padding-top:10px;
+      padding-bottom: 50px;
+      padding-right: 40%;
+      padding-left: 40%;
+      overflow: hidden;
+      position: relative;
+      background: url(../images/background-img.png) ;
+      -webkit-background-size:cover;
+      -moz-background-size:cover;
+      -o-background-size:cover;
+      background-size: cover;
+     animation: slide 5s linear infinite;
 }
 
 @keyframes slide {
   0% {
-    background-position: 0 -1000px;
+    background-position: 2000px 0;
   }
   95% {
     background-position: 0 0;
   }
   100% {
-    background-position: 0 50px;
+    background-position: 100px 0;
   }
 }
 
   #game-end {
     display: none;
+    
+    
   }
 
   #game-intro{
-    
     margin: 0; 
     padding: 0;
     background: linear-gradient(-45deg, #f06, #9f6, #06f, #f06);
-    background-size: 400% 400%;
-    /*animation: glitter 2s infinite;*/
+    background-size: cover;
+    animation: glitter 2s infinite;
     height: 100vh;
     width: 100vw;
-
-  }
+     }
 
   @keyframes glitter {
     0% {
@@ -161,4 +187,19 @@ body {
     }
   }  
   
-  
+  #restart-button{
+   
+    background:yellowgreen;
+    color: brown;
+    width: 150px;
+    margin-top: 10px;
+    line-height: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid blue;
+    border-radius: 20px;
+    font-size: medium;
+    
+  }
