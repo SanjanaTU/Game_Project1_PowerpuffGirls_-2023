@@ -14,8 +14,7 @@ let game
     })
 
     restartButton.addEventListener('click', function () {
-        game.player.element.remove()
-        startGame()
+        location.reload()
       })
 
     document.addEventListener('keydown', event => {

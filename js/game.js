@@ -29,11 +29,11 @@ class Game {
       gameLoop() {
         this.update()
     
-        if (this.animateId % 200 === 0) {
+        if (this.animateId % 80 === 0) {
           this.obstacles.push(
             new Obstacle(
               this.gameScreen,
-              Math.random() * (this.gameScreen.clientWidth - 40 - 100) + 50,-100, 150,100 )
+              Math.random() * (this.gameScreen.clientWidth - 40 - 100) + 50,-100, 150,120 )
           )
         }
     

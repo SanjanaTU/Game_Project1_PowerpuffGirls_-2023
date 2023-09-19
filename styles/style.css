@@ -67,7 +67,7 @@ body {
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
-    color:#663399;
+    color:#793399;
 }
 
 
@@ -205,8 +205,10 @@ body {
   }
 
   #info{
-    display: none;
-    font-size: medium;
+    display: block;
+    font-size: 30px;
     font-weight: bold;
-    color:crimson;
+    color:darkgreen ;
+    padding: 20px;
+    
   }
