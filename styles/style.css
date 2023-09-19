@@ -203,3 +203,10 @@ body {
     font-size: medium;
     
   }
+
+  #info{
+    display: none;
+    font-size: medium;
+    font-weight: bold;
+    color:crimson;
+  }
