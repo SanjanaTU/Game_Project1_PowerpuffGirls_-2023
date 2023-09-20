@@ -103,6 +103,23 @@ body {
 
 }
 
+#music-button{
+
+  background:#F8F8FF;
+  color: palevioletred;
+  width: 150px;
+  margin-top: 10px;
+  line-height: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid #B131DE;
+  border-radius: 20px;
+
+
+}
+
 
 
 
