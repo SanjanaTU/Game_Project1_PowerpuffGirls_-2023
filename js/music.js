@@ -1,6 +1,6 @@
 const toggleMusicButton = document.getElementById('music-button');
   const volumeSlider = document.getElementById('volume-slider');
-  let audioPlayer = new Audio('./audio/Theme_Song.mp3'); // Replace with your audio file path
+  let audioPlayer = new Audio('./audio/Theme_Song.mp3'); 
   let isPlaying = false;
   audioPlayer.loop = true;
 
@@ -12,11 +12,14 @@ const toggleMusicButton = document.getElementById('music-button');
       // Play audio
       audioPlayer.play();
       toggleMusicButton.textContent = 'Pause Music';
+      volumeSlider.classList.remove('hidden');
+      
       isPlaying = true;
     } else {
       // Pause audio
       audioPlayer.pause();
       toggleMusicButton.textContent = 'Play Music';
+      volumeSlider.classList.add('hidden');
       isPlaying = false;
     }
   });
