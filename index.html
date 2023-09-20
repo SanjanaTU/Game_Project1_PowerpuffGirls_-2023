@@ -33,23 +33,25 @@
         </div>
 
             <div id="game-container">
-                <div>
+                <div id="score-container">
                   <h2>Scores</h2>
                   <p>Score: <span id="score">0</span></p>
                   <p>Lives: <span id="lives">5</span></p>
                 </div>
 
                 <!-- #game-screen is initially hidden using CSS style display: none -->
-                    <div id="game-screen" style="text-align: center;"></div>
+                    <div id="game-screen" ></div>
             </div>
 
 
                 <!-- #game-end is initially hidden using CSS style display: none -->
                 <div id="game-end">
+                    <audio id="collision-sound" src="./audio/Sound_Effect.mp3" preload="auto" autoplay="false"></audio>
                     
-                    <h1>Game Over!</h1>
+                    <h1 id="end">Better Luck Next Time!<br>Game Over!</h1>
+                    <p>Final Score: <span id="final-score">0</span></p>
+
                     <br />
-                    
                     <button id="restart-button">Try Again!</button>
                 </div>
         <script type="text/javascript"  src="js/music.js"></script>  

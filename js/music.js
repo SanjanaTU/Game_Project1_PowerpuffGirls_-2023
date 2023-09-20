@@ -9,14 +9,14 @@ const toggleMusicButton = document.getElementById('music-button');
 
   toggleMusicButton.addEventListener('click', () => {
     if (!isPlaying) {
-      // Play audio
+     
       audioPlayer.play();
       toggleMusicButton.textContent = 'Pause Music';
       volumeSlider.classList.remove('hidden');
       
       isPlaying = true;
     } else {
-      // Pause audio
+      
       audioPlayer.pause();
       toggleMusicButton.textContent = 'Play Music';
       volumeSlider.classList.add('hidden');

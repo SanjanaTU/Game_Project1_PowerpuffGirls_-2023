@@ -26,5 +26,15 @@ class Obstacle {
     updatePosition() {
       this.top += 1
     }
+
+    
+    vibrate() {
+      console.log("Vibrating obstacle");
+      this.element.classList.add('shaking');
+      setTimeout(() => {
+          this.element.classList.remove('shaking');
+      }, 1000);
   }
-  
+
+ 
+}

@@ -9,8 +9,9 @@ class Game {
       this.obstacles = []
       this.animateId = 0
       this.score = 0
-      this.lives = 3
+      this.lives = 1
       this.gameOver = false
+      this.backgroundMusic = document.getElementById('music-button');
 
     }
 
@@ -39,6 +40,9 @@ class Game {
     
         document.getElementById('score').innerText = this.score
         document.getElementById('lives').innerText = this.lives
+
+        const finalScoreElement = document.getElementById('final-score');
+        finalScoreElement.innerText = this.score;
     
         if (this.lives < 1) {
           this.gameOver = true
@@ -47,11 +51,15 @@ class Game {
         if (this.gameOver) {
           this.gameScreen.style.display = 'none'
           this.gameEndScreen.style.display = 'block'
+          this.stopBackgroundMusic();
         } else {
           this.animateId = requestAnimationFrame(() => this.gameLoop())
         }
       }
-    
+      stopBackgroundMusic() {
+        this.backgroundMusic.pause();
+      }
+      
       update() {
         this.player.move()
         console.log(this.obstacles)
@@ -60,14 +68,19 @@ class Game {
           obstacle.move()
           if (this.player.didCollide(obstacle)) {
             this.lives -= 1
+            obstacle.vibrate();
             obstacle.element.remove()
+            const collisionSound = document.getElementById('collision-sound');
+            collisionSound.play();
           } else if (obstacle.top > this.gameScreen.clientHeight) {
             this.score += 1
             obstacle.element.remove()
           } else {
             nextObstacles.push(obstacle)
           }
-        })
+        });
         this.obstacles = nextObstacles
       }
-    }
+    
+      
+}
