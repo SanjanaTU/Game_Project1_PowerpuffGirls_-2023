@@ -29,7 +29,7 @@ class Game {
       gameLoop() {
         this.update()
     
-        if (this.animateId % 80 === 0) {
+        if (this.animateId % 400 === 0) {
           this.obstacles.push(
             new Obstacle(
               this.gameScreen,

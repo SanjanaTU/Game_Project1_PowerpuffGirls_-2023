@@ -10,7 +10,7 @@ class Player{
         this.element =document.createElement('img')
 
         
-        this.element.src = '../images/img2.png'
+        this.element.src = 'images/img2.png'
 
         this.element.style.position='absolute'
 
