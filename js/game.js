@@ -9,7 +9,7 @@ class Game {
       this.obstacles = []
       this.animateId = 0
       this.score = 0
-      this.lives = 5
+      this.lives = 3
       this.gameOver = false
       this.backgroundMusic = document.getElementById('music-button');
 

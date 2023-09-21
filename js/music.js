@@ -4,7 +4,7 @@ const toggleMusicButton = document.getElementById('music-button');
   let isPlaying = false;
   audioPlayer.loop = true;
 
-  // Initialize audio volume
+  
   audioPlayer.volume = volumeSlider.value;
 
   toggleMusicButton.addEventListener('click', () => {
@@ -25,6 +25,6 @@ const toggleMusicButton = document.getElementById('music-button');
   });
 
   volumeSlider.addEventListener('input', () => {
-    // Adjust the volume when the slider is changed
+    
     audioPlayer.volume = volumeSlider.value;
   });
